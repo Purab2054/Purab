@@ -1,81 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For Ayushi 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { margin:0; font-family:'Georgia', serif; background:#fff0f5; color:#4b0033; text-align:center; overflow-x:hidden; }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 80vh;
-      background: url('https://i.ibb.co/2d5zZk9/WvrrS8SM.jpg') no-repeat center center/cover;
-      display:flex; justify-content:center; align-items:center;
-    }
-    .overlay { background: rgba(0,0,0,0.4); color: #fff; padding:40px 20px; border-radius:15px; }
-    h1 { font-size:48px; margin-bottom:15px; animation: heartbeat 1.5s infinite; }
-    @keyframes heartbeat { 0%,100%{transform:scale(1);}50%{transform:scale(1.1);} }
-    p { font-size:20px; line-height:1.6; max-width:600px; margin:auto; }
-
-    /* Gallery */
-    .gallery { display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; padding:60px 20px; justify-items:center; }
-    .gallery img { width:100%; max-width:250px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.3); transition:0.3s; cursor:pointer; }
-    .gallery img:hover { transform:scale(1.05); box-shadow:0 12px 30px rgba(0,0,0,0.5); }
-
-    /* Message */
-    .message { padding:40px 20px; max-width:700px; margin:auto; font-size:20px; line-height:1.8; }
-    button { padding:12px 28px; border:none; background:#ff4da6; color:white; border-radius:25px; cursor:pointer; margin-top:20px; font-size:18px; transition:0.3s; }
-    button:hover { transform:scale(1.05); background:#ff1a75; }
-
-    footer { margin-top:40px; padding:15px; background:#ff4da6; color:white; font-size:16px; }
-
-    /* Floating hearts */
-    .heart { position:absolute; font-size:24px; color:#ff4da6; animation: floatUp 5s linear infinite; user-select:none; pointer-events:none; }
-    @keyframes floatUp { 0%{transform:translateY(0) scale(1); opacity:1;}100%{transform:translateY(-500px) scale(1.5); opacity:0;} }
-
-  </style>
+<meta charset="UTF-8">
+<title>For Ayushi 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { margin:0; font-family:Georgia, serif; background:#fff0f5; text-align:center; }
+  .hero { height:80vh; background:url('https://i.ibb.co/2d5zZk9/WvrrS8SM.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; color:white; }
+  .overlay { background:rgba(0,0,0,0.4); padding:30px; border-radius:15px; }
+  h1 { font-size:48px; margin:0 0 10px; }
+  p { font-size:20px; max-width:600px; margin:auto; }
+  .gallery { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; padding:40px; }
+  .gallery img { width:100%; max-width:250px; border-radius:10px; }
+  button { padding:12px 25px; border:none; background:#ff4da6; color:white; border-radius:20px; cursor:pointer; font-size:16px; margin-top:20px; }
+  button:hover { background:#ff1a75; }
+</style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <div class="hero">
-    <div class="overlay">
-      <h1>Ayushi 💖</h1>
-      <p>You are my peace, my happiness, and my forever. Every moment with you is magical.</p>
-    </div>
+<div class="hero">
+  <div class="overlay">
+    <h1>Ayushi 💖</h1>
+    <p>You are my peace, my happiness, and my forever. Every moment with you is magical.</p>
   </div>
+</div>
 
-  <!-- Gallery -->
-  <div class="gallery">
-    <img src="https://i.ibb.co/2d5zZk9/WvrrS8SM.jpg" alt="Ayushi 1">
-    <img src="https://i.ibb.co/jHJYqT8/fYXWDWRz.jpg" alt="Ayushi 2">
-    <img src="https://i.ibb.co/6RZY0zQ/svy2Qp5f.jpg" alt="Ayushi 3">
-    <img src="https://i.ibb.co/Lk5vH3c/yBb0b96H.jpg" alt="Ayushi 4">
-  </div>
+<div class="gallery">
+  <img src="https://i.ibb.co/2d5zZk9/WvrrS8SM.jpg" alt="Ayushi 1">
+  <img src="https://i.ibb.co/jHJYqT8/fYXWDWRz.jpg" alt="Ayushi 2">
+  <img src="https://i.ibb.co/6RZY0zQ/svy2Qp5f.jpg" alt="Ayushi 3">
+  <img src="https://i.ibb.co/Lk5vH3c/yBb0b96H.jpg" alt="Ayushi 4">
+</div>
 
-  <!-- Message -->
-  <div class="message">
-    Every day I choose you, every day I admire you, and every day I feel lucky to have you in my life. 💕
-    <br>
-    <button onclick="alert('You are my world, Ayushi 💖')">Tap for Love</button>
-  </div>
-
-  <footer>Made with all my heart — Purab 💖</footer>
-
-  <!-- Floating hearts -->
-  <script>
-    function createHeart() {
-      const heart=document.createElement('div'); heart.className='heart'; heart.innerText='💖';
-      heart.style.left=Math.random()*window.innerWidth+'px';
-      heart.style.fontSize=12+Math.random()*24+'px';
-      heart.style.animationDuration=3+Math.random()*2+'s';
-      document.body.appendChild(heart);
-      setTimeout(()=>heart.remove(),5000);
-    }
-    setInterval(createHeart,500);
-  </script>
+<button onclick="alert('You are my world, Ayushi 💖')">Tap for Love</button>
 
 </body>
 </html>
