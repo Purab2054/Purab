@@ -3,71 +3,98 @@
 <head>
   <title>For Ayushi 🤍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <style>
     body {
       margin: 0;
       font-family: Georgia, serif;
-      background: #f4f4f4;
-      color: #222;
+      background: #fff;
       text-align: center;
     }
 
+    /* HERO SECTION */
     .hero {
+      position: relative;
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-      url('https://i.ibb.co/spdcZ6ch/997972ad-c5fe-48dd-a642-84f7656219c3.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: black;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
+      background: rgba(0,0,0,0.45);
       padding: 20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 20px;
+    p {
+      font-size: 18px;
       max-width: 600px;
       line-height: 1.6;
     }
 
-    .section {
+    /* GALLERY SECTION */
+    .gallery {
       padding: 60px 20px;
-      max-width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 700px;
       margin: auto;
-      font-size: 19px;
+      font-size: 18px;
       line-height: 1.8;
     }
 
     button {
-      padding: 14px 30px;
-      font-size: 16px;
+      padding: 12px 28px;
       border: none;
-      background: #111;
+      background: black;
       color: white;
-      border-radius: 30px;
+      border-radius: 25px;
       cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #444;
+      margin-top: 20px;
     }
 
     footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #111;
-      color: #eee;
+      margin-top: 40px;
+      padding: 15px;
+      background: black;
+      color: white;
       font-size: 14px;
     }
   </style>
@@ -75,21 +102,28 @@
 
 <body>
 
+  <!-- HERO IMAGE -->
   <div class="hero">
-    <h1>For Ayushi 🤍</h1>
-    <p>
-      Some people enter your life quietly  
-      and become your peace, your strength,  
-      and your happiness.
-    </p>
+    <img src="https://i.ibb.co/spdcZ6ch/997972ad-c5fe-48dd-a642-84f7656219c3.jpg">
+    
+    <div class="overlay">
+      <h1>For Ayushi 🤍</h1>
+      <p>You are my peace, my strength, and my happiness.</p>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <img src="https://i.ibb.co/whQSsBnh/421083e6-48f7-4490-ac20-1dfc9175f2e4.jpg">
+    <img src="https://i.ibb.co/bjhqZBGk/35e500e0-e2d8-4b93-9bd1-8e9979a43be7.jpg">
+    <img src="https://i.ibb.co/9HHpD35k/1bb2a739-04ac-4b6a-9a3c-b9c0dad028d5.jpg">
   </div>
 
   <div class="section">
     I may not always say it perfectly,  
-    but I value you, respect you,  
-    and choose you — every single day.
-    <br><br>
-    <button onclick="alert('You are truly special to me 🤍')">
+    but I value you, respect you, and choose you — every single day.
+    <br>
+    <button onclick="alert('You are truly special 🤍')">
       Tap for something
     </button>
   </div>
