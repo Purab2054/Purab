@@ -1,20 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Warm Cozy Houses 🏡🔥</title>
+  <meta charset="UTF-8">
+  <title>For Ayushi 💖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background: #fff8f0;
+      background: #fff0f5;
+      color: #4b0033;
       text-align: center;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://i.ibb.co/spdcZ6ch/997972ad-c5fe-48dd-a642-84f7656219c3.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      margin-top: 40px;
-      font-size: 36px;
-      color: #b34700;
+      font-size: 48px;
+      margin-bottom: 15px;
+      animation: heartBeat 1.5s infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
     }
 
     .gallery {
@@ -22,7 +59,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     .gallery img {
@@ -38,28 +75,67 @@
       box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     }
 
-    footer {
-      margin-top: 30px;
-      padding: 15px;
-      background: #b34700;
+    .message {
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: auto;
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    button {
+      padding: 12px 28px;
+      border: none;
+      background: #ff4da6;
       color: white;
-      font-size: 14px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #ff1a75;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #ff4da6;
+      color: white;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Warm Cozy Houses 🏡🔥</h1>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay">
+      <h1>Ayushi 💖</h1>
+      <p>You are my peace, my happiness, and my forever. Every moment with you is magical.</p>
+    </div>
+  </div>
 
+  <!-- Gallery Section -->
   <div class="gallery">
-    <img src="https://i.ibb.co/YTb7h0p/house1.jpg" alt="House 1">
-    <img src="https://i.ibb.co/7v3ZyJH/house2.jpg" alt="House 2">
-    <img src="https://i.ibb.co/2FJZbTq/house3.jpg" alt="House 3">
-    <img src="https://i.ibb.co/8Kp1zTx/house4.jpg" alt="House 4">
+    <img src="https://i.ibb.co/whQSsBnh/421083e6-48f7-4490-ac20-1dfc9175f2e4.jpg" alt="Ayushi 1">
+    <img src="https://i.ibb.co/bjhqZBGk/35e500e0-e2d8-4b93-9bd1-8e9979a43be7.jpg" alt="Ayushi 2">
+    <img src="https://i.ibb.co/9HHpD35k/1bb2a739-04ac-4b6a-9a3c-b9c0dad028d5.jpg" alt="Ayushi 3">
+    <img src="https://i.ibb.co/NxGqXqG/ayushi4.jpg" alt="Ayushi 4">
+  </div>
+
+  <!-- Romantic Message -->
+  <div class="message">
+    Every day I choose you, every day I admire you, and every day I feel lucky to have you in my life. 💕
+    <br>
+    <button onclick="alert('You are my world, Ayushi 💖')">Tap for Love</button>
   </div>
 
   <footer>
-    Made with warmth and love ❤️
+    Made with all my heart — Purab 💖
   </footer>
 
 </body>
