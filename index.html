@@ -14,25 +14,11 @@
       overflow-x: hidden;
     }
 
-    /* Heart floating animation */
-    .heart {
-      position: absolute;
-      font-size: 24px;
-      color: #ff4da6;
-      animation: floatUp 5s linear infinite;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: translateY(-500px) scale(1.5); opacity: 0; }
-    }
-
+    /* Hero Section */
     .hero {
       position: relative;
-      height: 100vh;
-      background: url('https://i.ibb.co/whQSsBnh/421083e6-48f7-4490-ac20-1dfc9175f2e4.jpg') no-repeat center center/cover;
+      height: 80vh; /* proportion fix */
+      background: url('https://i.ibb.co/placeholder-hero.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -43,21 +29,15 @@
       color: #fff;
       padding: 40px 20px;
       border-radius: 15px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       font-size: 48px;
       margin-bottom: 15px;
-      animation: heartBeat 1.5s infinite;
+      animation: heartbeat 1.5s infinite;
     }
 
-    @keyframes heartBeat {
+    @keyframes heartbeat {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.1); }
     }
@@ -69,16 +49,18 @@
       margin: auto;
     }
 
+    /* Gallery Section */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 images in one row */
       gap: 20px;
       padding: 60px 20px;
+      justify-items: center;
     }
 
     .gallery img {
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
@@ -90,6 +72,7 @@
       box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     }
 
+    /* Message Section */
     .message {
       padding: 40px 20px;
       max-width: 700px;
@@ -122,6 +105,22 @@
       color: white;
       font-size: 16px;
     }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff4da6;
+      animation: floatUp 5s linear infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-500px) scale(1.5); opacity: 0; }
+    }
+
   </style>
 </head>
 <body>
@@ -153,7 +152,7 @@
     Made with all my heart — Purab 💖
   </footer>
 
-  <!-- Floating hearts animation -->
+  <!-- Floating hearts -->
   <script>
     function createHeart() {
       const heart = document.createElement('div');
@@ -165,7 +164,6 @@
       document.body.appendChild(heart);
       setTimeout(() => heart.remove(), 5000);
     }
-
     setInterval(createHeart, 500);
   </script>
 
