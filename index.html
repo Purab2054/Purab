@@ -14,10 +14,25 @@
       overflow-x: hidden;
     }
 
+    /* Heart floating animation */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff4da6;
+      animation: floatUp 5s linear infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-500px) scale(1.5); opacity: 0; }
+    }
+
     .hero {
       position: relative;
       height: 100vh;
-      background: url('https://i.ibb.co/spdcZ6ch/997972ad-c5fe-48dd-a642-84f7656219c3.jpg') no-repeat center center/cover;
+      background: url('https://i.ibb.co/whQSsBnh/421083e6-48f7-4490-ac20-1dfc9175f2e4.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -137,6 +152,22 @@
   <footer>
     Made with all my heart — Purab 💖
   </footer>
+
+  <!-- Floating hearts animation -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = '💖';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.fontSize = 12 + Math.random() * 24 + 'px';
+      heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
 
 </body>
 </html>
